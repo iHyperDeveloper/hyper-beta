@@ -9,6 +9,20 @@ require('./util/eventLoader')(client);
 
 var prefix = ayarlar.prefix;
 
+const log = message => {
+  console.log(`[${moment().format('DD-MM-YYYY HH:mm:ss')}] ${message}`);
+};
+
+
+client.on('message', msg => {
+  console.log(`MESAJ: ${msg.content} YAZAN: ${msg.author.tag} KANAL: ${msg.channel.name}`);
+  if (msg.author.id === ayarlar.id) return;
+  if (msg.author.bot) return;
+
+  if (!msg.content.startsWith(prefix)) {
+	  return;
+  }
+});
 
 
 client.commands = new Discord.Collection();
