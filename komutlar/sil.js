@@ -9,7 +9,7 @@ exports.run = function(client, message, args) {
     if (mesaj.length < 1) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Sil;').setDescription(message.author.tag + ', kullanım: !sil <sayı>.').setFooter('Hyper Project', client.user.avatarURL).setTimestamp());
     if (mesajsayisi > 100) return message.channel.send(new Discord.RichEmbed().setColor('RANDOM').setTitle('Sil;').setDescription(message.author.tag + ', 100 adetden fazla mesaj silemem.').setFooter('Hyper Project', client.user.avatarURL).setTimestamp());
   message.channel.bulkDelete(mesajsayisi + 1);
-  message.channel.send(mesaj +" adet mesaj sildim.Sildiren : `"+message.author.username+'#'+message.author.discriminator +'`')
+  message.channel.send(mesaj +" adet mesaj sildim. Sildiren : `"+message.author.username+'#'+message.author.discriminator +'`')
   message.channel.bulkDelete(2);
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -17,7 +17,7 @@ exports.run = function(client, message, args) {
   .setDescription(`**${message.author.username}** adlı kullanıcı sil komutunu kullandı.\n[**${message.guild.name}** sunucusunda]!\n[**${message.channel.name}** kanalında]`)
   .setFooter('Hyper Project', client.user.avatarURL)
   .setTimestamp()
-  client.channels.get('533215744087949322').send(embed);
+  client.channels.get('533259270372851713').send(embed);
 };
 
 exports.conf = {
