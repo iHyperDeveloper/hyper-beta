@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
     .setDescription(':newspaper2: **' + message.author.tag + '** adlı kullanıcının Önerisi;')
     .addField(':envelope: Gönderen Kişinin Bilgileri', '• Kullanıcı ID: ' + message.author.id + '\n• Kullanıcı Adı: ' + message.author.username + '\n• Kullanıcı Tag: ' + message.author.discriminator + '')
     .addField(':pencil: Gönderilen Öneri', mesaj)
-  return client.channels.get("533024590675443742").send(tavsiye);
+  return client.channels.get("533257847434379265").send(tavsiye);
 };
 
 exports.conf = {
